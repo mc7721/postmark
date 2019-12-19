@@ -1,0 +1,1849 @@
+{
+    "id": "5f0057e347cba03ff159d5584980ce55",
+    "name": "Postmark API",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "08d53dfcea7067e8f61c27327b1cfbf4",
+            "name": "Send a single email",
+            "url": "http:\/\/api.postmarkapp.com\/\/email",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "fe088a10175dfe83651d193c132193e2",
+            "name": "Send a batch of emails",
+            "url": "http:\/\/api.postmarkapp.com\/\/email\/batch",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "1703250088f200e9cb4eb551c918ef20",
+            "name": "Get delivery stats",
+            "url": "http:\/\/api.postmarkapp.com\/\/deliverystats",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "ffbadd21698385a67b0c005648e67773",
+            "name": "Get bounces",
+            "url": "http:\/\/api.postmarkapp.com\/\/bounces",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "count",
+                    "description": "Number of bounces to return per request. Max 500.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "Number of bounces to skip.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "type",
+                    "description": "Filter by type of bounce",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "inactive",
+                    "description": "Filter by emails that were deactivated by Postmark due to the bounce. Set to true or false. If this isn't specified it will return both active and inactive.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "emailFilter",
+                    "description": "Filter by email address",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "messageID",
+                    "description": "Filter by messageID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tag",
+                    "description": "Filter by tag",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "todate",
+                    "description": "Filter messages up to the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fromdate",
+                    "description": "Filter messages starting from the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "7ec84f3bbdb5f0ae3d4d3cf939d34808",
+            "name": "Get a single bounce",
+            "url": "http:\/\/api.postmarkapp.com\/\/bounces\/{bounceid}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "bounceid",
+                    "description": "The ID of the bounce to retrieve.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "a5b9cf3afe20e7256a12b65f9bd6d898",
+            "name": "Get bounce dump",
+            "url": "http:\/\/api.postmarkapp.com\/\/bounces\/{bounceid}\/dump",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "bounceid",
+                    "description": "The ID of the bounce to retrieve.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "edd970bb8e276498092f2d94765c10c2",
+            "name": "Get bounced tags",
+            "url": "http:\/\/api.postmarkapp.com\/\/bounces\/tags",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "de14cc4ecc052f5ffd9ad18a198c296c",
+            "name": "Activate a bounce",
+            "url": "http:\/\/api.postmarkapp.com\/\/bounces\/{bounceid}\/activate",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "bounceid",
+                    "description": "The ID of the bounce to retrieve.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "569d8a645d763914a0f5accf800732c7",
+            "name": "Outbound message search",
+            "url": "http:\/\/api.postmarkapp.com\/\/messages\/outbound",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "count",
+                    "description": "Number of bounces to return per request. Max 500.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "Number of bounces to skip.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "recipient",
+                    "description": "Filter by the user who was receiving the email",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fromemail",
+                    "description": "Filter by the sender email address",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tag",
+                    "description": "Filter by tag",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "status",
+                    "description": "Filter by status (`queued` or `sent`)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "todate",
+                    "description": "Filter messages up to the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fromdate",
+                    "description": "Filter messages starting from the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "0a52f78a3642fc534295b493dec7cd69",
+            "name": "Outbound message details",
+            "url": "http:\/\/api.postmarkapp.com\/\/messages\/outbound\/{messageid}\/details",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "messageid",
+                    "description": "The ID of the message for which to retrieve details.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "3c02dbe4bba719bbf19470187d7930cb",
+            "name": "Outbound message dump",
+            "url": "http:\/\/api.postmarkapp.com\/\/messages\/outbound\/{messageid}\/dump",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "messageid",
+                    "description": "The ID of the message for which to retrieve details.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "d130e5d7f7b5e9c6726da292f4d1e2dd",
+            "name": "Inbound message search",
+            "url": "http:\/\/api.postmarkapp.com\/\/messages\/inbound",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "count",
+                    "description": "Number of bounces to return per request. Max 500.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "Number of bounces to skip.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "recipient",
+                    "description": "Filter by the user who was receiving the email",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fromemail",
+                    "description": "Filter by the sender email address",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "subject",
+                    "description": "Filter by email subject",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "mailboxhash",
+                    "description": "Filter by mailboxhash",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tag",
+                    "description": "Filter by tag",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "status",
+                    "description": "Filter by status (`queued` or `sent`)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "todate",
+                    "description": "Filter messages up to the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fromdate",
+                    "description": "Filter messages starting from the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "aceabe3acfd740dac5d8e9ac6b02f795",
+            "name": "Inbound message details",
+            "url": "http:\/\/api.postmarkapp.com\/\/messages\/inbound\/{messageid}\/details",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "messageid",
+                    "description": "The ID of the message for which to retrieve details.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "ee3b31f4cd51507325fdf5dfab009518",
+            "name": "Bypass rules for a blocked inbound message",
+            "url": "http:\/\/api.postmarkapp.com\/\/messages\/inbound\/{messageid}\/bypass",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "messageid",
+                    "description": "The ID of the message for which to retrieve details.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "387c4919d2ddba5e73c1a9747c87cda4",
+            "name": "Retry a failed inbound message for processing",
+            "url": "http:\/\/api.postmarkapp.com\/\/messages\/inbound\/{messageid}\/retry",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "messageid",
+                    "description": "The ID of the message for which to retrieve details.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "dd13a373d14923ab8e8b40e72037fe88",
+            "name": "Opens for all messages",
+            "url": "http:\/\/api.postmarkapp.com\/\/messages\/outbound\/opens",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "count",
+                    "description": "Number of bounces to return per request. Max 500.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "Number of bounces to skip.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "recipient",
+                    "description": "Filter by the user who was receiving the email",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tag",
+                    "description": "Filter by tag",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "client_name",
+                    "description": "Filter by client name, i.e. Outlook, Gmail",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "client_company",
+                    "description": "Filter by company, i.e. Microsoft, Apple, Google",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "client_family",
+                    "description": "Filter by client family, i.e. OS X, Chrome",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "os_name",
+                    "description": "Filter by full OS name and specific version, i.e. OS X 10.9 Mavericks, Windows 7",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "os_family",
+                    "description": "Filter by kind of OS used without specific version, i.e. OS X, Windows",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "os_company",
+                    "description": "Filter by company which produced the OS, i.e. Apple Computer, Inc., Microsoft Corporation",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "platform",
+                    "description": "Filter by platform, i.e. webmail, desktop, mobile",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "country",
+                    "description": "Filter by country messages were opened in, i.e. Denmark, Russia",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "region",
+                    "description": "Filter by full name of region messages were opened in, i.e. Moscow, New York",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "city",
+                    "description": "Filter by full name of region messages were opened in, i.e. Moscow, New York",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "952739d911537a883c3077abc97ad5c3",
+            "name": "Retrieve Message Opens",
+            "url": "http:\/\/api.postmarkapp.com\/\/messages\/outbound\/opens\/{messageid}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "messageid",
+                    "description": "The ID of the message for which to retrieve details.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "count",
+                    "description": "Number of bounces to return per request. Max 500.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "Number of bounces to skip.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "ea66af6516fb6edda5ad466ac45128cb",
+            "name": "Clicks for a all messages",
+            "url": "http:\/\/api.postmarkapp.com\/\/messages\/outbound\/clicks",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "count",
+                    "description": "Number of bounces to return per request. Max 500.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "Number of bounces to skip.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "recipient",
+                    "description": "Filter by the user who was receiving the email",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tag",
+                    "description": "Filter by tag",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "client_name",
+                    "description": "Filter by client name, i.e. Outlook, Gmail",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "client_company",
+                    "description": "Filter by company, i.e. Microsoft, Apple, Google",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "client_family",
+                    "description": "Filter by client family, i.e. OS X, Chrome",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "os_name",
+                    "description": "Filter by full OS name and specific version, i.e. OS X 10.9 Mavericks, Windows 7",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "os_family",
+                    "description": "Filter by kind of OS used without specific version, i.e. OS X, Windows",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "os_company",
+                    "description": "Filter by company which produced the OS, i.e. Apple Computer, Inc., Microsoft Corporation",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "platform",
+                    "description": "Filter by platform, i.e. webmail, desktop, mobile",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "country",
+                    "description": "Filter by country messages were opened in, i.e. Denmark, Russia",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "region",
+                    "description": "Filter by full name of region messages were opened in, i.e. Moscow, New York",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "city",
+                    "description": "Filter by full name of region messages were opened in, i.e. Moscow, New York",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "a6adf437e6e85fe645ca88f33ec4799b",
+            "name": "Retrieve Message Clicks",
+            "url": "http:\/\/api.postmarkapp.com\/\/messages\/outbound\/clicks\/{messageid}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "messageid",
+                    "description": "The ID of the message for which to retrieve details.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "count",
+                    "description": "Number of bounces to return per request. Max 500.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "Number of bounces to skip.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "75e9431f08db2f6dabbfdd6c27d866f2",
+            "name": "Send an email using a Template",
+            "url": "http:\/\/api.postmarkapp.com\/\/email\/withTemplate",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "78855878cf8a9192679bd951c0f39b93",
+            "name": "Send a batch of email using templates.",
+            "url": "http:\/\/api.postmarkapp.com\/\/email\/batchWithTemplates",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "5380b98f6f5ac1398852d0c269fdcd88",
+            "name": "Get the Templates associated with this Server",
+            "url": "http:\/\/api.postmarkapp.com\/\/templates",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "count",
+                    "description": "Number of bounces to return per request. Max 500.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "Number of bounces to skip.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "5ff96d608e2fdb341cc7bd38f8a9d297",
+            "name": "Create a Template",
+            "url": "http:\/\/api.postmarkapp.com\/\/templates",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "61f1723c0b66a36b294688da32cb7a58",
+            "name": "Get a Template",
+            "url": "http:\/\/api.postmarkapp.com\/\/templates\/{templateIdOrAlias}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "templateIdOrAlias",
+                    "description": "The 'TemplateID' or 'Alias' value for the Template you wish to retrieve.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "bcf8f2dda2cd294358bdc96733aefe96",
+            "name": "Update a Template",
+            "url": "http:\/\/api.postmarkapp.com\/\/templates\/{templateIdOrAlias}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "templateIdOrAlias",
+                    "description": "The 'TemplateID' or 'Alias' value for the Template you wish to retrieve.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "f692cc2043bb99e7f7ad5c2d6f6afd42",
+            "name": "Delete a Template",
+            "url": "http:\/\/api.postmarkapp.com\/\/templates\/{templateIdOrAlias}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "templateIdOrAlias",
+                    "description": "The 'TemplateID' or 'Alias' value for the Template you wish to retrieve.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "e5e47d26fd80ce9a6fc560f2c0908da1",
+            "name": "Test Template Content",
+            "url": "http:\/\/api.postmarkapp.com\/\/templates\/validate",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "3bf8854d60ee16cd75d1744f4db90bb5",
+            "name": "Get outbound overview",
+            "url": "http:\/\/api.postmarkapp.com\/\/stats\/outbound",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "tag",
+                    "description": "Filter by tag",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fromdate",
+                    "description": "Filter messages starting from the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "todate",
+                    "description": "Filter messages up to the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "0855adf74c96e019a6ee78f4aaa924bb",
+            "name": "Get sent counts",
+            "url": "http:\/\/api.postmarkapp.com\/\/stats\/outbound\/sends",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "tag",
+                    "description": "Filter by tag",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fromdate",
+                    "description": "Filter messages starting from the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "todate",
+                    "description": "Filter messages up to the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "92c8832f5fd86d2aaeca08c37342e78d",
+            "name": "Get bounce counts",
+            "url": "http:\/\/api.postmarkapp.com\/\/stats\/outbound\/bounces",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "tag",
+                    "description": "Filter by tag",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fromdate",
+                    "description": "Filter messages starting from the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "todate",
+                    "description": "Filter messages up to the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "a4e0bfc77732606054c6f33b8a6b6c03",
+            "name": "Get spam complaints",
+            "url": "http:\/\/api.postmarkapp.com\/\/stats\/outbound\/spam",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "tag",
+                    "description": "Filter by tag",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fromdate",
+                    "description": "Filter messages starting from the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "todate",
+                    "description": "Filter messages up to the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "d5ddad76486f3099b0c1cbd1000b609a",
+            "name": "Get tracked email counts",
+            "url": "http:\/\/api.postmarkapp.com\/\/stats\/outbound\/tracked",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "tag",
+                    "description": "Filter by tag",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fromdate",
+                    "description": "Filter messages starting from the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "todate",
+                    "description": "Filter messages up to the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "3640a9ac64ae4e89cf70914e777414e3",
+            "name": "Get email open counts",
+            "url": "http:\/\/api.postmarkapp.com\/\/stats\/outbound\/opens",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "tag",
+                    "description": "Filter by tag",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fromdate",
+                    "description": "Filter messages starting from the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "todate",
+                    "description": "Filter messages up to the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "a7e7c9c387524546276af83be3887d81",
+            "name": "Get email platform usage",
+            "url": "http:\/\/api.postmarkapp.com\/\/stats\/outbound\/opens\/platforms",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "tag",
+                    "description": "Filter by tag",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fromdate",
+                    "description": "Filter messages starting from the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "todate",
+                    "description": "Filter messages up to the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "5d5b53c3ec291091a8eaee5f6c2bdd33",
+            "name": "Get email client usage",
+            "url": "http:\/\/api.postmarkapp.com\/\/stats\/outbound\/opens\/emailclients",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "tag",
+                    "description": "Filter by tag",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fromdate",
+                    "description": "Filter messages starting from the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "todate",
+                    "description": "Filter messages up to the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "6d05370980ec26266039070d6286bb4b",
+            "name": "Get click counts",
+            "url": "http:\/\/api.postmarkapp.com\/\/stats\/outbound\/clicks",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "tag",
+                    "description": "Filter by tag",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fromdate",
+                    "description": "Filter messages starting from the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "todate",
+                    "description": "Filter messages up to the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "4a6f6e6f9ced5d937aa2d8520031b3c5",
+            "name": "Get browser usage by family",
+            "url": "http:\/\/api.postmarkapp.com\/\/stats\/outbound\/clicks\/browserfamilies",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "tag",
+                    "description": "Filter by tag",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fromdate",
+                    "description": "Filter messages starting from the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "todate",
+                    "description": "Filter messages up to the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "2f806de3ba41bb8cbff875525743a504",
+            "name": "Get browser plaform usage",
+            "url": "http:\/\/api.postmarkapp.com\/\/stats\/outbound\/clicks\/platforms",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "tag",
+                    "description": "Filter by tag",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fromdate",
+                    "description": "Filter messages starting from the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "todate",
+                    "description": "Filter messages up to the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "128fdbff01d5560a7e4f74a88089ec77",
+            "name": "Get clicks by body location",
+            "url": "http:\/\/api.postmarkapp.com\/\/stats\/outbound\/clicks\/location",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "tag",
+                    "description": "Filter by tag",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fromdate",
+                    "description": "Filter messages starting from the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "todate",
+                    "description": "Filter messages up to the date specified. e.g. `2014-02-01`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "167ef056419874b535d2e478cead149d",
+            "name": "Create an inbound rule trigger",
+            "url": "http:\/\/api.postmarkapp.com\/\/triggers\/inboundrules",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "55532eb58f797ed7b176c98aca01da9c",
+            "name": "List inbound rule triggers",
+            "url": "http:\/\/api.postmarkapp.com\/\/triggers\/inboundrules",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "count",
+                    "description": "Number of bounces to return per request. Max 500.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "Number of bounces to skip.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "7b646e7d58a8b5449ad18fb48cafcd47",
+            "name": "Delete a single trigger",
+            "url": "http:\/\/api.postmarkapp.com\/\/triggers\/inboundrules\/{triggerid}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "triggerid",
+                    "description": "The ID of the Inbound Rule that should be deleted.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "1eae313e1348014657545db18a3c3dfc",
+            "name": "Get Server Configuration",
+            "url": "http:\/\/api.postmarkapp.com\/\/server",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        },
+        {
+            "id": "9d1fa3f5d7ff2b58c8f1490fb2bfdf36",
+            "name": "Edit Server Configuration",
+            "url": "http:\/\/api.postmarkapp.com\/\/server",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "rawModeData": ""
+        }
+    ]
+}
