@@ -1,0 +1,2860 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Postmark API",
+        "description": "Postmark makes sending and receiving email\nincredibly easy.\n",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/api.postmarkapp.com\/"
+    ],
+    "paths": {
+        "\/email": {
+            "post": {
+                "summary": "Send a single email",
+                "description": "",
+                "operationId": "SendEmail",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/email\/batch": {
+            "post": {
+                "summary": "Send a batch of emails",
+                "description": "",
+                "operationId": "SendEmailBatch",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/deliverystats": {
+            "get": {
+                "summary": "Get delivery stats",
+                "description": "",
+                "operationId": "GetDeliveryStats",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/bounces": {
+            "get": {
+                "summary": "Get bounces",
+                "description": "",
+                "operationId": "GetBounces",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "Number of bounces to return per request. Max 500."
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "Number of bounces to skip."
+                    },
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "description": "Filter by type of bounce"
+                    },
+                    {
+                        "name": "inactive",
+                        "in": "query",
+                        "description": "Filter by emails that were deactivated by Postmark due to the bounce. Set to true or false. If this isn't specified it will return both active and inactive."
+                    },
+                    {
+                        "name": "emailFilter",
+                        "in": "query",
+                        "description": "Filter by email address"
+                    },
+                    {
+                        "name": "messageID",
+                        "in": "query",
+                        "description": "Filter by messageID"
+                    },
+                    {
+                        "name": "tag",
+                        "in": "query",
+                        "description": "Filter by tag"
+                    },
+                    {
+                        "name": "todate",
+                        "in": "query",
+                        "description": "Filter messages up to the date specified. e.g. `2014-02-01`"
+                    },
+                    {
+                        "name": "fromdate",
+                        "in": "query",
+                        "description": "Filter messages starting from the date specified. e.g. `2014-02-01`"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/bounces\/{bounceid}": {
+            "get": {
+                "summary": "Get a single bounce",
+                "description": "",
+                "operationId": "GetSingleBounce",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "bounceid",
+                        "in": "path",
+                        "description": "The ID of the bounce to retrieve."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/bounces\/{bounceid}\/dump": {
+            "get": {
+                "summary": "Get bounce dump",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "bounceid",
+                        "in": "path",
+                        "description": "The ID of the bounce to retrieve."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/bounces\/tags": {
+            "get": {
+                "summary": "Get bounced tags",
+                "description": "",
+                "operationId": "GetBouncedTags",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/bounces\/{bounceid}\/activate": {
+            "put": {
+                "summary": "Activate a bounce",
+                "description": "",
+                "operationId": "ActivateBounce",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "bounceid",
+                        "in": "path",
+                        "description": "The ID of the bounce to retrieve."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/messages\/outbound": {
+            "get": {
+                "summary": "Outbound message search",
+                "description": "",
+                "operationId": "SearchOutboundMessages",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "Number of bounces to return per request. Max 500."
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "Number of bounces to skip."
+                    },
+                    {
+                        "name": "recipient",
+                        "in": "query",
+                        "description": "Filter by the user who was receiving the email"
+                    },
+                    {
+                        "name": "fromemail",
+                        "in": "query",
+                        "description": "Filter by the sender email address"
+                    },
+                    {
+                        "name": "tag",
+                        "in": "query",
+                        "description": "Filter by tag"
+                    },
+                    {
+                        "name": "status",
+                        "in": "query",
+                        "description": "Filter by status (`queued` or `sent`)"
+                    },
+                    {
+                        "name": "todate",
+                        "in": "query",
+                        "description": "Filter messages up to the date specified. e.g. `2014-02-01`"
+                    },
+                    {
+                        "name": "fromdate",
+                        "in": "query",
+                        "description": "Filter messages starting from the date specified. e.g. `2014-02-01`"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/messages\/outbound\/{messageid}\/details": {
+            "get": {
+                "summary": "Outbound message details",
+                "description": "",
+                "operationId": "GetOutboundMessageDetails",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "messageid",
+                        "in": "path",
+                        "description": "The ID of the message for which to retrieve details."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/messages\/outbound\/{messageid}\/dump": {
+            "get": {
+                "summary": "Outbound message dump",
+                "description": "",
+                "operationId": "GetOutboundMessageDump",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "messageid",
+                        "in": "path",
+                        "description": "The ID of the message for which to retrieve details."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/messages\/inbound": {
+            "get": {
+                "summary": "Inbound message search",
+                "description": "",
+                "operationId": "SearchInboundMessages",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "Number of bounces to return per request. Max 500."
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "Number of bounces to skip."
+                    },
+                    {
+                        "name": "recipient",
+                        "in": "query",
+                        "description": "Filter by the user who was receiving the email"
+                    },
+                    {
+                        "name": "fromemail",
+                        "in": "query",
+                        "description": "Filter by the sender email address"
+                    },
+                    {
+                        "name": "subject",
+                        "in": "query",
+                        "description": "Filter by email subject"
+                    },
+                    {
+                        "name": "mailboxhash",
+                        "in": "query",
+                        "description": "Filter by mailboxhash"
+                    },
+                    {
+                        "name": "tag",
+                        "in": "query",
+                        "description": "Filter by tag"
+                    },
+                    {
+                        "name": "status",
+                        "in": "query",
+                        "description": "Filter by status (`queued` or `sent`)"
+                    },
+                    {
+                        "name": "todate",
+                        "in": "query",
+                        "description": "Filter messages up to the date specified. e.g. `2014-02-01`"
+                    },
+                    {
+                        "name": "fromdate",
+                        "in": "query",
+                        "description": "Filter messages starting from the date specified. e.g. `2014-02-01`"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/messages\/inbound\/{messageid}\/details": {
+            "get": {
+                "summary": "Inbound message details",
+                "description": "",
+                "operationId": "GetInboundMessageDetails",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "messageid",
+                        "in": "path",
+                        "description": "The ID of the message for which to retrieve details."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/messages\/inbound\/{messageid}\/bypass": {
+            "put": {
+                "summary": "Bypass rules for a blocked inbound message",
+                "description": "",
+                "operationId": "BypassRulesForInboundMessage",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "messageid",
+                        "in": "path",
+                        "description": "The ID of the message for which to retrieve details."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/messages\/inbound\/{messageid}\/retry": {
+            "put": {
+                "summary": "Retry a failed inbound message for processing",
+                "description": "",
+                "operationId": "RetryInboundMessageProcessing",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "messageid",
+                        "in": "path",
+                        "description": "The ID of the message for which to retrieve details."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/messages\/outbound\/opens": {
+            "get": {
+                "summary": "Opens for all messages",
+                "description": "",
+                "operationId": "SearchOpensForOutboundMessages",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "Number of bounces to return per request. Max 500."
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "Number of bounces to skip."
+                    },
+                    {
+                        "name": "recipient",
+                        "in": "query",
+                        "description": "Filter by the user who was receiving the email"
+                    },
+                    {
+                        "name": "tag",
+                        "in": "query",
+                        "description": "Filter by tag"
+                    },
+                    {
+                        "name": "client_name",
+                        "in": "query",
+                        "description": "Filter by client name, i.e. Outlook, Gmail"
+                    },
+                    {
+                        "name": "client_company",
+                        "in": "query",
+                        "description": "Filter by company, i.e. Microsoft, Apple, Google"
+                    },
+                    {
+                        "name": "client_family",
+                        "in": "query",
+                        "description": "Filter by client family, i.e. OS X, Chrome"
+                    },
+                    {
+                        "name": "os_name",
+                        "in": "query",
+                        "description": "Filter by full OS name and specific version, i.e. OS X 10.9 Mavericks, Windows 7"
+                    },
+                    {
+                        "name": "os_family",
+                        "in": "query",
+                        "description": "Filter by kind of OS used without specific version, i.e. OS X, Windows"
+                    },
+                    {
+                        "name": "os_company",
+                        "in": "query",
+                        "description": "Filter by company which produced the OS, i.e. Apple Computer, Inc., Microsoft Corporation"
+                    },
+                    {
+                        "name": "platform",
+                        "in": "query",
+                        "description": "Filter by platform, i.e. webmail, desktop, mobile"
+                    },
+                    {
+                        "name": "country",
+                        "in": "query",
+                        "description": "Filter by country messages were opened in, i.e. Denmark, Russia"
+                    },
+                    {
+                        "name": "region",
+                        "in": "query",
+                        "description": "Filter by full name of region messages were opened in, i.e. Moscow, New York"
+                    },
+                    {
+                        "name": "city",
+                        "in": "query",
+                        "description": "Filter by full name of region messages were opened in, i.e. Moscow, New York"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/messages\/outbound\/opens\/{messageid}": {
+            "get": {
+                "summary": "Retrieve Message Opens",
+                "description": "",
+                "operationId": "GetOpensForSingleOutboundMessage",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "messageid",
+                        "in": "path",
+                        "description": "The ID of the message for which to retrieve details."
+                    },
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "Number of bounces to return per request. Max 500."
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "Number of bounces to skip."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/messages\/outbound\/clicks": {
+            "get": {
+                "summary": "Clicks for a all messages",
+                "description": "",
+                "operationId": "SearchClicksForOutboundMessages",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "Number of bounces to return per request. Max 500."
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "Number of bounces to skip."
+                    },
+                    {
+                        "name": "recipient",
+                        "in": "query",
+                        "description": "Filter by the user who was receiving the email"
+                    },
+                    {
+                        "name": "tag",
+                        "in": "query",
+                        "description": "Filter by tag"
+                    },
+                    {
+                        "name": "client_name",
+                        "in": "query",
+                        "description": "Filter by client name, i.e. Outlook, Gmail"
+                    },
+                    {
+                        "name": "client_company",
+                        "in": "query",
+                        "description": "Filter by company, i.e. Microsoft, Apple, Google"
+                    },
+                    {
+                        "name": "client_family",
+                        "in": "query",
+                        "description": "Filter by client family, i.e. OS X, Chrome"
+                    },
+                    {
+                        "name": "os_name",
+                        "in": "query",
+                        "description": "Filter by full OS name and specific version, i.e. OS X 10.9 Mavericks, Windows 7"
+                    },
+                    {
+                        "name": "os_family",
+                        "in": "query",
+                        "description": "Filter by kind of OS used without specific version, i.e. OS X, Windows"
+                    },
+                    {
+                        "name": "os_company",
+                        "in": "query",
+                        "description": "Filter by company which produced the OS, i.e. Apple Computer, Inc., Microsoft Corporation"
+                    },
+                    {
+                        "name": "platform",
+                        "in": "query",
+                        "description": "Filter by platform, i.e. webmail, desktop, mobile"
+                    },
+                    {
+                        "name": "country",
+                        "in": "query",
+                        "description": "Filter by country messages were opened in, i.e. Denmark, Russia"
+                    },
+                    {
+                        "name": "region",
+                        "in": "query",
+                        "description": "Filter by full name of region messages were opened in, i.e. Moscow, New York"
+                    },
+                    {
+                        "name": "city",
+                        "in": "query",
+                        "description": "Filter by full name of region messages were opened in, i.e. Moscow, New York"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/messages\/outbound\/clicks\/{messageid}": {
+            "get": {
+                "summary": "Retrieve Message Clicks",
+                "description": "",
+                "operationId": "GetClicksForSingleOutboundMessage",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "messageid",
+                        "in": "path",
+                        "description": "The ID of the message for which to retrieve details."
+                    },
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "Number of bounces to return per request. Max 500."
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "Number of bounces to skip."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/email\/withTemplate": {
+            "post": {
+                "summary": "Send an email using a Template",
+                "description": "",
+                "operationId": "SendEmailWithTemplate",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/email\/batchWithTemplates": {
+            "post": {
+                "summary": "Send a batch of email using templates.",
+                "description": "",
+                "operationId": "SendEmailBatchWithTemplates",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/templates": {
+            "get": {
+                "summary": "Get the Templates associated with this Server",
+                "description": "",
+                "operationId": "ListTemplates",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "Number of bounces to return per request. Max 500."
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "Number of bounces to skip."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create a Template",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/templates\/{templateIdOrAlias}": {
+            "get": {
+                "summary": "Get a Template",
+                "description": "",
+                "operationId": "GetSingleTemplate",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "templateIdOrAlias",
+                        "in": "path",
+                        "description": "The 'TemplateID' or 'Alias' value for the Template you wish to retrieve."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update a Template",
+                "description": "",
+                "operationId": "UpdateTemplate",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "templateIdOrAlias",
+                        "in": "path",
+                        "description": "The 'TemplateID' or 'Alias' value for the Template you wish to retrieve."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete a Template",
+                "description": "",
+                "operationId": "DeleteTemplate",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "templateIdOrAlias",
+                        "in": "path",
+                        "description": "The 'TemplateID' or 'Alias' value for the Template you wish to retrieve."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/templates\/validate": {
+            "post": {
+                "summary": "Test Template Content",
+                "description": "",
+                "operationId": "TestTemplateContent",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/stats\/outbound": {
+            "get": {
+                "summary": "Get outbound overview",
+                "description": "",
+                "operationId": "GetOutboundOverviewStatistics",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tag",
+                        "in": "query",
+                        "description": "Filter by tag"
+                    },
+                    {
+                        "name": "fromdate",
+                        "in": "query",
+                        "description": "Filter messages starting from the date specified. e.g. `2014-02-01`"
+                    },
+                    {
+                        "name": "todate",
+                        "in": "query",
+                        "description": "Filter messages up to the date specified. e.g. `2014-02-01`"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/stats\/outbound\/sends": {
+            "get": {
+                "summary": "Get sent counts",
+                "description": "",
+                "operationId": "GetSentCounts",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tag",
+                        "in": "query",
+                        "description": "Filter by tag"
+                    },
+                    {
+                        "name": "fromdate",
+                        "in": "query",
+                        "description": "Filter messages starting from the date specified. e.g. `2014-02-01`"
+                    },
+                    {
+                        "name": "todate",
+                        "in": "query",
+                        "description": "Filter messages up to the date specified. e.g. `2014-02-01`"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/stats\/outbound\/bounces": {
+            "get": {
+                "summary": "Get bounce counts",
+                "description": "",
+                "operationId": "GetBounceCounts",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tag",
+                        "in": "query",
+                        "description": "Filter by tag"
+                    },
+                    {
+                        "name": "fromdate",
+                        "in": "query",
+                        "description": "Filter messages starting from the date specified. e.g. `2014-02-01`"
+                    },
+                    {
+                        "name": "todate",
+                        "in": "query",
+                        "description": "Filter messages up to the date specified. e.g. `2014-02-01`"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/stats\/outbound\/spam": {
+            "get": {
+                "summary": "Get spam complaints",
+                "description": "",
+                "operationId": "GetSpamComplaints",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tag",
+                        "in": "query",
+                        "description": "Filter by tag"
+                    },
+                    {
+                        "name": "fromdate",
+                        "in": "query",
+                        "description": "Filter messages starting from the date specified. e.g. `2014-02-01`"
+                    },
+                    {
+                        "name": "todate",
+                        "in": "query",
+                        "description": "Filter messages up to the date specified. e.g. `2014-02-01`"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/stats\/outbound\/tracked": {
+            "get": {
+                "summary": "Get tracked email counts",
+                "description": "",
+                "operationId": "GetTrackedEmailCounts",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tag",
+                        "in": "query",
+                        "description": "Filter by tag"
+                    },
+                    {
+                        "name": "fromdate",
+                        "in": "query",
+                        "description": "Filter messages starting from the date specified. e.g. `2014-02-01`"
+                    },
+                    {
+                        "name": "todate",
+                        "in": "query",
+                        "description": "Filter messages up to the date specified. e.g. `2014-02-01`"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/stats\/outbound\/opens": {
+            "get": {
+                "summary": "Get email open counts",
+                "description": "",
+                "operationId": "GetOutboundOpenCounts",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tag",
+                        "in": "query",
+                        "description": "Filter by tag"
+                    },
+                    {
+                        "name": "fromdate",
+                        "in": "query",
+                        "description": "Filter messages starting from the date specified. e.g. `2014-02-01`"
+                    },
+                    {
+                        "name": "todate",
+                        "in": "query",
+                        "description": "Filter messages up to the date specified. e.g. `2014-02-01`"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/stats\/outbound\/opens\/platforms": {
+            "get": {
+                "summary": "Get email platform usage",
+                "description": "",
+                "operationId": "GetOutboundOpenCountsByPlatform",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tag",
+                        "in": "query",
+                        "description": "Filter by tag"
+                    },
+                    {
+                        "name": "fromdate",
+                        "in": "query",
+                        "description": "Filter messages starting from the date specified. e.g. `2014-02-01`"
+                    },
+                    {
+                        "name": "todate",
+                        "in": "query",
+                        "description": "Filter messages up to the date specified. e.g. `2014-02-01`"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/stats\/outbound\/opens\/emailclients": {
+            "get": {
+                "summary": "Get email client usage",
+                "description": "",
+                "operationId": "GetOutboundOpenCountsByEmailClient",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tag",
+                        "in": "query",
+                        "description": "Filter by tag"
+                    },
+                    {
+                        "name": "fromdate",
+                        "in": "query",
+                        "description": "Filter messages starting from the date specified. e.g. `2014-02-01`"
+                    },
+                    {
+                        "name": "todate",
+                        "in": "query",
+                        "description": "Filter messages up to the date specified. e.g. `2014-02-01`"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/stats\/outbound\/clicks": {
+            "get": {
+                "summary": "Get click counts",
+                "description": "",
+                "operationId": "GetOutboundClickCounts",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tag",
+                        "in": "query",
+                        "description": "Filter by tag"
+                    },
+                    {
+                        "name": "fromdate",
+                        "in": "query",
+                        "description": "Filter messages starting from the date specified. e.g. `2014-02-01`"
+                    },
+                    {
+                        "name": "todate",
+                        "in": "query",
+                        "description": "Filter messages up to the date specified. e.g. `2014-02-01`"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/stats\/outbound\/clicks\/browserfamilies": {
+            "get": {
+                "summary": "Get browser usage by family",
+                "description": "",
+                "operationId": "GetOutboundClickCountsByBrowserFamily",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tag",
+                        "in": "query",
+                        "description": "Filter by tag"
+                    },
+                    {
+                        "name": "fromdate",
+                        "in": "query",
+                        "description": "Filter messages starting from the date specified. e.g. `2014-02-01`"
+                    },
+                    {
+                        "name": "todate",
+                        "in": "query",
+                        "description": "Filter messages up to the date specified. e.g. `2014-02-01`"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/stats\/outbound\/clicks\/platforms": {
+            "get": {
+                "summary": "Get browser plaform usage",
+                "description": "",
+                "operationId": "GetOutboundClickCountsByPlatform",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tag",
+                        "in": "query",
+                        "description": "Filter by tag"
+                    },
+                    {
+                        "name": "fromdate",
+                        "in": "query",
+                        "description": "Filter messages starting from the date specified. e.g. `2014-02-01`"
+                    },
+                    {
+                        "name": "todate",
+                        "in": "query",
+                        "description": "Filter messages up to the date specified. e.g. `2014-02-01`"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/stats\/outbound\/clicks\/location": {
+            "get": {
+                "summary": "Get clicks by body location",
+                "description": "",
+                "operationId": "GetOutboundClickCountsByLocation",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tag",
+                        "in": "query",
+                        "description": "Filter by tag"
+                    },
+                    {
+                        "name": "fromdate",
+                        "in": "query",
+                        "description": "Filter messages starting from the date specified. e.g. `2014-02-01`"
+                    },
+                    {
+                        "name": "todate",
+                        "in": "query",
+                        "description": "Filter messages up to the date specified. e.g. `2014-02-01`"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/triggers\/inboundrules": {
+            "post": {
+                "summary": "Create an inbound rule trigger",
+                "description": "",
+                "operationId": "CreateInboundRule",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "get": {
+                "summary": "List inbound rule triggers",
+                "description": "",
+                "operationId": "ListInboundRules",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "Number of bounces to return per request. Max 500."
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "Number of bounces to skip."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/triggers\/inboundrules\/{triggerid}": {
+            "delete": {
+                "summary": "Delete a single trigger",
+                "description": "",
+                "operationId": "DeleteInboundRule",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "triggerid",
+                        "in": "path",
+                        "description": "The ID of the Inbound Rule that should be deleted."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/server": {
+            "get": {
+                "summary": "Get Server Configuration",
+                "description": "",
+                "operationId": "GetCurrentServerConfiguration",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Edit Server Configuration",
+                "description": "",
+                "operationId": "EditCurrentServerConfiguration",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/SendEmailResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "DynamicResponse": {
+                "type": "object"
+            },
+            "SendEmailRequest": {
+                "type": "object",
+                "properties": {
+                    "From": {
+                        "description": "The sender email address. Must have a registered and confirmed Sender Signature.",
+                        "type": "string"
+                    },
+                    "To": {
+                        "description": "Recipient email address. Multiple addresses are comma seperated. Max 50.",
+                        "type": "string"
+                    },
+                    "Cc": {
+                        "description": "Recipient email address. Multiple addresses are comma seperated. Max 50.",
+                        "type": "string"
+                    },
+                    "Bcc": {
+                        "description": "Bcc recipient email address. Multiple addresses are comma seperated. Max 50.",
+                        "type": "string"
+                    },
+                    "Subject": {
+                        "description": "Email Subject",
+                        "type": "string"
+                    },
+                    "Tag": {
+                        "description": "Email tag that allows you to categorize outgoing emails and get detailed statistics.",
+                        "type": "string"
+                    },
+                    "HtmlBody": {
+                        "description": "If no TextBody specified HTML email message",
+                        "type": "string"
+                    },
+                    "TextBody": {
+                        "description": "If no HtmlBody specified Plain text email message",
+                        "type": "string"
+                    },
+                    "ReplyTo": {
+                        "description": "Reply To override email address. Defaults to the Reply To set in the sender signature.",
+                        "type": "string"
+                    },
+                    "TrackOpens": {
+                        "description": "Activate open tracking for this email.",
+                        "type": "boolean"
+                    },
+                    "TrackLinks": {
+                        "description": "Replace links in content to enable \"click tracking\" stats. Default is 'null', which uses the server's LinkTracking setting'.",
+                        "type": "string"
+                    },
+                    "Headers": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "Attachments": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "Headers": {
+                "type": "object"
+            },
+            "Attachments": {
+                "type": "object"
+            },
+            "EmailWithTemplateRequest": {
+                "type": "object",
+                "properties": {
+                    "TemplateId": {
+                        "description": "Required if 'TemplateAlias' is not specified.",
+                        "type": "integer"
+                    },
+                    "TemplateAlias": {
+                        "description": "Required if 'TemplateId' is not specified.",
+                        "type": "string"
+                    },
+                    "TemplateModel": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "InlineCss": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "From": {
+                        "description": "The sender email address. Must have a registered and confirmed Sender Signature.",
+                        "type": "string"
+                    },
+                    "To": {
+                        "description": "Recipient email address. Multiple addresses are comma seperated. Max 50.",
+                        "type": "string"
+                    },
+                    "Cc": {
+                        "description": "Recipient email address. Multiple addresses are comma seperated. Max 50.",
+                        "type": "string"
+                    },
+                    "Bcc": {
+                        "description": "Bcc recipient email address. Multiple addresses are comma seperated. Max 50.",
+                        "type": "string"
+                    },
+                    "Tag": {
+                        "description": "Email tag that allows you to categorize outgoing emails and get detailed statistics.",
+                        "type": "string"
+                    },
+                    "ReplyTo": {
+                        "description": "Reply To override email address. Defaults to the Reply To set in the sender signature.",
+                        "type": "string"
+                    },
+                    "Headers": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "TrackOpens": {
+                        "description": "Activate open tracking for this email.",
+                        "type": "boolean"
+                    },
+                    "TrackLinks": {
+                        "description": "Replace links in content to enable \"click tracking\" stats. Default is 'null', which uses the server's LinkTracking setting'.",
+                        "type": "string"
+                    },
+                    "Attachments": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "TemplateModel": {
+                "type": "object"
+            },
+            "EditServerConfigurationRequest": {
+                "type": "object",
+                "properties": {
+                    "Name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Color": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "RawEmailEnabled": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "DeliveryHookUrl": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "SmtpApiActivated": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "InboundHookUrl": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "BounceHookUrl": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "OpenHookUrl": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "PostFirstOpenOnly": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "TrackOpens": {
+                        "description": "Activate open tracking for this email.",
+                        "type": "boolean"
+                    },
+                    "TrackLinks": {
+                        "description": "Replace links in content to enable \"click tracking\" stats. Default is 'null', which uses the server's LinkTracking setting'.",
+                        "type": "string"
+                    },
+                    "ClickHookUrl": {
+                        "description": "Webhook url allowing real-time notification when tracked links are clicked.",
+                        "type": "string"
+                    },
+                    "InboundDomain": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "InboundSpamThreshold": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "SendEmailBatchRequest": {
+                "type": "object"
+            },
+            "SendEmailTemplatedBatchRequest": {
+                "type": "object",
+                "properties": {
+                    "Messages": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "Messages": {
+                "type": "array"
+            },
+            "TemplateValidationRequest": {
+                "type": "object",
+                "properties": {
+                    "Subject": {
+                        "description": "Email Subject",
+                        "type": "string"
+                    },
+                    "HtmlBody": {
+                        "description": "If no TextBody specified HTML email message",
+                        "type": "string"
+                    },
+                    "TextBody": {
+                        "description": "If no HtmlBody specified Plain text email message",
+                        "type": "string"
+                    },
+                    "TestRenderModel": {
+                        "description": "The model to be used when rendering test content.",
+                        "type": "object"
+                    },
+                    "InlineCssForHtmlTestRender": {
+                        "description": "When HtmlBody is specified, the test render will have style blocks\ninlined as style attributes on matching html elements. You may disable\nthe css inlining behavior by passing false for this parameter.\n",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "TestRenderModel": {
+                "type": "object"
+            },
+            "CreateTemplateRequest": {
+                "type": "object",
+                "properties": {
+                    "Alias": {
+                        "description": "The optional string identifier for referring to this Template (numbers, letters, and '.', '-', '_' characters, starts with a letter).",
+                        "type": "string"
+                    },
+                    "Name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Subject": {
+                        "description": "Email Subject",
+                        "type": "string"
+                    },
+                    "HtmlBody": {
+                        "description": "If no TextBody specified HTML email message",
+                        "type": "string"
+                    },
+                    "TextBody": {
+                        "description": "If no HtmlBody specified Plain text email message",
+                        "type": "string"
+                    }
+                }
+            },
+            "EditTemplateRequest": {
+                "type": "object",
+                "properties": {
+                    "Alias": {
+                        "description": "The optional string identifier for referring to this Template (numbers, letters, and '.', '-', '_' characters, starts with a letter).",
+                        "type": "string"
+                    },
+                    "Name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Subject": {
+                        "description": "Email Subject",
+                        "type": "string"
+                    },
+                    "HtmlBody": {
+                        "description": "If no TextBody specified HTML email message",
+                        "type": "string"
+                    },
+                    "TextBody": {
+                        "description": "If no HtmlBody specified Plain text email message",
+                        "type": "string"
+                    }
+                }
+            },
+            "CreateInboundRuleRequest": {
+                "type": "object",
+                "properties": {
+                    "Rule": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "SentCountsResponse": {
+                "type": "object",
+                "properties": {
+                    "Sent": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "Days": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "Days": {
+                "type": "array"
+            },
+            "StandardPostmarkResponse": {
+                "type": "object",
+                "properties": {
+                    "ErrorCode": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "SendEmailResponse": {
+                "type": "object",
+                "properties": {
+                    "To": {
+                        "description": "Recipient email address. Multiple addresses are comma seperated. Max 50.",
+                        "type": "string"
+                    },
+                    "SubmittedAt": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "MessageID": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ErrorCode": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "BounceActivationResponse": {
+                "type": "object",
+                "properties": {
+                    "Message": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Bounce": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "Bounce": {
+                "type": "object"
+            },
+            "ServerConfigurationResponse": {
+                "type": "object",
+                "properties": {
+                    "ID": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "Name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ApiTokens": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "ServerLink": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Color": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "InboundAddress": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "RawEmailEnabled": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "DeliveryHookUrl": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "SmtpApiActivated": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "InboundHookUrl": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "BounceHookUrl": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "OpenHookUrl": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "PostFirstOpenOnly": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "TrackOpens": {
+                        "description": "Activate open tracking for this email.",
+                        "type": "boolean"
+                    },
+                    "TrackLinks": {
+                        "description": "Replace links in content to enable \"click tracking\" stats. Default is 'null', which uses the server's LinkTracking setting'.",
+                        "type": "string"
+                    },
+                    "ClickHookUrl": {
+                        "description": "Webhook url allowing real-time notification when tracked links are clicked.",
+                        "type": "string"
+                    },
+                    "InboundDomain": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "InboundHash": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "InboundSpamThreshold": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "ApiTokens": {
+                "type": "array"
+            },
+            "SendEmailBatchResponse": {
+                "type": "object"
+            },
+            "DeliveryStatsResponse": {
+                "type": "object",
+                "properties": {
+                    "InactiveMails": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "Bounces": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "Bounces": {
+                "type": "array"
+            },
+            "BounceInfoResponse": {
+                "type": "object",
+                "properties": {
+                    "ID": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "TypeCode": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "Name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Tag": {
+                        "description": "Email tag that allows you to categorize outgoing emails and get detailed statistics.",
+                        "type": "string"
+                    },
+                    "MessageID": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Details": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Email": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "BouncedAt": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "DumpAvailable": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "Inactive": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "CanActivate": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "Subject": {
+                        "description": "Email Subject",
+                        "type": "string"
+                    },
+                    "Content": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "BounceSearchResponse": {
+                "type": "object",
+                "properties": {
+                    "TotalCount": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "Bounces": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "BounceDumpResponse": {
+                "type": "object",
+                "properties": {
+                    "Body": {
+                        "description": "Raw source of bounce. If no dump is available this will return an empty string.",
+                        "type": "string"
+                    }
+                }
+            },
+            "OutboundMessageDumpResponse": {
+                "type": "object",
+                "properties": {
+                    "Body": {
+                        "description": "Raw source of bounce. If no dump is available this will return an empty string.",
+                        "type": "string"
+                    }
+                }
+            },
+            "TemplateRecordResponse": {
+                "type": "object",
+                "properties": {
+                    "Name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Alias": {
+                        "description": "The optional string identifier for referring to this Template (numbers, letters, and '.', '-', '_' characters, starts with a letter).",
+                        "type": "string"
+                    },
+                    "TemplateId": {
+                        "description": "The associated ID for this template.",
+                        "type": "number"
+                    },
+                    "Active": {
+                        "description": "True if this template is currently available for use.",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "TemplateValidationResponse": {
+                "type": "object",
+                "properties": {
+                    "AllContentIsValid": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "TextBody": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "HtmlBody": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "Subject": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "SuggestedTemplateModel": {
+                        "description": "",
+                        "type": "object"
+                    }
+                }
+            },
+            "TextBody": {
+                "type": "object"
+            },
+            "HtmlBody": {
+                "type": "object"
+            },
+            "Subject": {
+                "type": "object"
+            },
+            "SuggestedTemplateModel": {
+                "type": "object"
+            },
+            "TemplateListingResponse": {
+                "type": "object",
+                "properties": {
+                    "TotalCount": {
+                        "description": "The total number of Templates API associated with this server.",
+                        "type": "number"
+                    },
+                    "Templates API": {
+                        "description": "Basic information for each Template returned from the query.",
+                        "type": "array"
+                    }
+                }
+            },
+            "Templates API": {
+                "type": "array"
+            },
+            "InboundMessageFullDetailsResponse": {
+                "type": "object",
+                "properties": {
+                    "From": {
+                        "description": "The sender email address. Must have a registered and confirmed Sender Signature.",
+                        "type": "string"
+                    },
+                    "FromName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "FromFull": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "To": {
+                        "description": "Recipient email address. Multiple addresses are comma seperated. Max 50.",
+                        "type": "string"
+                    },
+                    "ToFull": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "Cc": {
+                        "description": "Recipient email address. Multiple addresses are comma seperated. Max 50.",
+                        "type": "string"
+                    },
+                    "CcFull": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "ReplyTo": {
+                        "description": "Reply To override email address. Defaults to the Reply To set in the sender signature.",
+                        "type": "string"
+                    },
+                    "OriginalRecipient": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Subject": {
+                        "description": "Email Subject",
+                        "type": "string"
+                    },
+                    "Date": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "MailboxHash": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "TextBody": {
+                        "description": "If no HtmlBody specified Plain text email message",
+                        "type": "string"
+                    },
+                    "HtmlBody": {
+                        "description": "If no TextBody specified HTML email message",
+                        "type": "string"
+                    },
+                    "Tag": {
+                        "description": "Email tag that allows you to categorize outgoing emails and get detailed statistics.",
+                        "type": "string"
+                    },
+                    "Headers": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "Attachments": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "MessageID": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "BlockedReason": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Status": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "ToFull": {
+                "type": "array"
+            },
+            "CcFull": {
+                "type": "array"
+            },
+            "InboundSearchResponse": {
+                "type": "object",
+                "properties": {
+                    "TotalCount": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "InboundMessages": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "InboundMessages": {
+                "type": "array"
+            },
+            "OutboundSearchResponse": {
+                "type": "object",
+                "properties": {
+                    "TotalCount": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "Messages": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "TemplateDetailResponse": {
+                "type": "object",
+                "properties": {
+                    "Name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Alias": {
+                        "description": "The optional string identifier for referring to this Template (numbers, letters, and '.', '-', '_' characters, starts with a letter).",
+                        "type": "string"
+                    },
+                    "TemplateId": {
+                        "description": "Required if 'TemplateAlias' is not specified.",
+                        "type": "integer"
+                    },
+                    "HtmlBody": {
+                        "description": "If no TextBody specified HTML email message",
+                        "type": "string"
+                    },
+                    "TextBody": {
+                        "description": "If no HtmlBody specified Plain text email message",
+                        "type": "string"
+                    },
+                    "AssociatedServerId": {
+                        "description": "The ID of the Server with which this template is associated.",
+                        "type": "integer"
+                    },
+                    "Subject": {
+                        "description": "Email Subject",
+                        "type": "string"
+                    },
+                    "Active": {
+                        "description": "True if this template is currently available for use.",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "OutboundMessageDetailsResponse": {
+                "type": "object",
+                "properties": {
+                    "TextBody": {
+                        "description": "If no HtmlBody specified Plain text email message",
+                        "type": "string"
+                    },
+                    "HtmlBody": {
+                        "description": "If no TextBody specified HTML email message",
+                        "type": "string"
+                    },
+                    "Body": {
+                        "description": "Raw source of bounce. If no dump is available this will return an empty string.",
+                        "type": "string"
+                    },
+                    "Tag": {
+                        "description": "Email tag that allows you to categorize outgoing emails and get detailed statistics.",
+                        "type": "string"
+                    },
+                    "MessageID": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "To": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "Cc": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "Bcc": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "Recipients": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "ReceivedAt": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "From": {
+                        "description": "The sender email address. Must have a registered and confirmed Sender Signature.",
+                        "type": "string"
+                    },
+                    "Subject": {
+                        "description": "Email Subject",
+                        "type": "string"
+                    },
+                    "Attachments": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "Status": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "TrackOpens": {
+                        "description": "Activate open tracking for this email.",
+                        "type": "boolean"
+                    },
+                    "TrackLinks": {
+                        "description": "Replace links in content to enable \"click tracking\" stats. Default is 'null', which uses the server's LinkTracking setting'.",
+                        "type": "string"
+                    },
+                    "MessageEvents": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "To": {
+                "type": "array"
+            },
+            "Cc": {
+                "type": "array"
+            },
+            "Bcc": {
+                "type": "array"
+            },
+            "Recipients": {
+                "type": "array"
+            },
+            "MessageEvents": {
+                "type": "array"
+            },
+            "MessageOpenSearchResponse": {
+                "type": "object",
+                "properties": {
+                    "TotalCount": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "Opens": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "Opens": {
+                "type": "array"
+            },
+            "MessageClickSearchResponse": {
+                "type": "object",
+                "properties": {
+                    "TotalCount": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "Clicks": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "Clicks": {
+                "type": "array"
+            },
+            "OutboundOverviewStatsResponse": {
+                "type": "object",
+                "properties": {
+                    "Sent": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "Bounced": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "SMTPAPIErrors": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "BounceRate": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "SpamComplaints": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "SpamComplaintsRate": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "Opens": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "UniqueOpens": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "Tracked": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "WithOpenTracking": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "WithLinkTracking": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "TotalClicks": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "UniqueLinksClicked": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "TotalTrackedLinksSent": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "WithClientRecorded": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "WithPlatformRecorded": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "ExtendedMessageClickEventInformation": {
+                "type": "object",
+                "properties": {
+                    "ClickLocation": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Client": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "OS": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "Platform": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "UserAgent": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "OriginalLink": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Geo": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "MessageID": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ReceivedAt": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Tag": {
+                        "description": "Email tag that allows you to categorize outgoing emails and get detailed statistics.",
+                        "type": "string"
+                    },
+                    "Recipient": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "ExtendedMessageOpenEventInformation": {
+                "type": "object",
+                "properties": {
+                    "FirstOpen": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "Client": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "OS": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "Platform": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "UserAgent": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Geo": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "MessageID": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ReceivedAt": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Tag": {
+                        "description": "Email tag that allows you to categorize outgoing emails and get detailed statistics.",
+                        "type": "string"
+                    },
+                    "Recipient": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "MessageEventDetails": {
+                "type": "object",
+                "properties": {
+                    "Recipient": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ReceivedAt": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Details": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "OutboundMessageDetail": {
+                "type": "object",
+                "properties": {
+                    "Tag": {
+                        "description": "Email tag that allows you to categorize outgoing emails and get detailed statistics.",
+                        "type": "string"
+                    },
+                    "MessageID": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "To": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "Cc": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "Bcc": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "Recipients": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "ReceivedAt": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "From": {
+                        "description": "The sender email address. Must have a registered and confirmed Sender Signature.",
+                        "type": "string"
+                    },
+                    "Subject": {
+                        "description": "Email Subject",
+                        "type": "string"
+                    },
+                    "Attachments": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "Status": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "TrackOpens": {
+                        "description": "Activate open tracking for this email.",
+                        "type": "boolean"
+                    },
+                    "TrackLinks": {
+                        "description": "Replace links in content to enable \"click tracking\" stats. Default is 'null', which uses the server's LinkTracking setting'.",
+                        "type": "string"
+                    }
+                }
+            },
+            "InboundMessageDetail": {
+                "type": "object",
+                "properties": {
+                    "From": {
+                        "description": "The sender email address. Must have a registered and confirmed Sender Signature.",
+                        "type": "string"
+                    },
+                    "FromName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "FromFull": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "To": {
+                        "description": "Recipient email address. Multiple addresses are comma seperated. Max 50.",
+                        "type": "string"
+                    },
+                    "ToFull": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "Cc": {
+                        "description": "Recipient email address. Multiple addresses are comma seperated. Max 50.",
+                        "type": "string"
+                    },
+                    "CcFull": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "ReplyTo": {
+                        "description": "Reply To override email address. Defaults to the Reply To set in the sender signature.",
+                        "type": "string"
+                    },
+                    "OriginalRecipient": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Subject": {
+                        "description": "Email Subject",
+                        "type": "string"
+                    },
+                    "Date": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "MailboxHash": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Tag": {
+                        "description": "Email tag that allows you to categorize outgoing emails and get detailed statistics.",
+                        "type": "string"
+                    },
+                    "Attachments": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "MessageID": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Status": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "EmailNameAddressPair": {
+                "type": "object",
+                "properties": {
+                    "Name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Email": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "BounceCountElement": {
+                "type": "object",
+                "properties": {
+                    "Name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Count": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "Type": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "MessageHeader": {
+                "type": "object",
+                "properties": {
+                    "Name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Value": {
+                        "description": "The header's value.",
+                        "type": "string"
+                    }
+                }
+            },
+            "Attachment": {
+                "type": "object",
+                "properties": {
+                    "Name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Content": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ContentType": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ContentID": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "AttachmentCollection": {
+                "type": "array"
+            },
+            "HeaderCollection": {
+                "type": "array"
+            },
+            "TemplateValidationResult": {
+                "type": "object",
+                "properties": {
+                    "ContentIsValid": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "ValidationErrors": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "RenderedContent": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "ValidationErrors": {
+                "type": "array"
+            },
+            "TemplateValidationError": {
+                "type": "object",
+                "properties": {
+                    "Message": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Line": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "CharacterPosition": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            }
+        }
+    }
+}
