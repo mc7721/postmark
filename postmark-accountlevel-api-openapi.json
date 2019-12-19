@@ -1,0 +1,1275 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "0.9.0",
+        "title": "Postmark Account-level API",
+        "description": "Postmark makes sending and receiving email\nincredibly easy. The Account-level API allows users to\nconfigure all Servers, Domains, and Sender Signatures associated\nwith an Account.\n",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/api.postmarkapp.com\/"
+    ],
+    "paths": {
+        "\/servers\/{serverid}": {
+            "get": {
+                "summary": "Get a Server",
+                "description": "",
+                "operationId": "GetServerInformation",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "serverid",
+                        "in": "path",
+                        "description": "The ID of the Server to get."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ExtendedServerInfo"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Edit a Server",
+                "description": "",
+                "operationId": "EditServerInformation",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "serverid",
+                        "in": "path",
+                        "description": "The ID of the Server to get."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ExtendedServerInfo"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete a Server",
+                "description": "",
+                "operationId": "DeleteServer",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "serverid",
+                        "in": "path",
+                        "description": "The ID of the Server to get."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ExtendedServerInfo"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/servers": {
+            "get": {
+                "summary": "List servers",
+                "description": "",
+                "operationId": "ListServers",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "Number of servers to return per request."
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "Number of servers to skip."
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "Filter by a specific server name"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ExtendedServerInfo"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create a Server",
+                "description": "",
+                "operationId": "CreateServer",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ExtendedServerInfo"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/senders": {
+            "get": {
+                "summary": "List Sender Signatures",
+                "description": "",
+                "operationId": "ListSenderSignatures",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "Number of servers to return per request."
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "Number of servers to skip."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ExtendedServerInfo"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create a Sender Signature",
+                "description": "",
+                "operationId": "CreateSenderSignature",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ExtendedServerInfo"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/senders\/{signatureid}": {
+            "get": {
+                "summary": "Get a Sender Signature",
+                "description": "",
+                "operationId": "GetSenderSignature",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "signatureid",
+                        "in": "path",
+                        "description": "The ID for the Sender Signature that should be retrieved."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ExtendedServerInfo"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update a Sender Signature",
+                "description": "",
+                "operationId": "EditSenderSignature",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "signatureid",
+                        "in": "path",
+                        "description": "The ID for the Sender Signature that should be retrieved."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ExtendedServerInfo"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete a Sender Signature",
+                "description": "",
+                "operationId": "DeleteSenderSignature",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "signatureid",
+                        "in": "path",
+                        "description": "The ID for the Sender Signature that should be retrieved."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ExtendedServerInfo"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/senders\/{signatureid}\/resend": {
+            "post": {
+                "summary": "Resend Signature Confirmation Email",
+                "description": "",
+                "operationId": "ResendSenderSignatureConfirmationEmail",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "signatureid",
+                        "in": "path",
+                        "description": "The ID for the Sender Signature that should be retrieved."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ExtendedServerInfo"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/senders\/{signatureid}\/verifyspf": {
+            "post": {
+                "summary": "Request DNS Verification for SPF",
+                "description": "",
+                "operationId": "RequestSPFVerificationForSenderSignature",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "signatureid",
+                        "in": "path",
+                        "description": "The ID for the Sender Signature that should be retrieved."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ExtendedServerInfo"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/senders\/{signatureid}\/requestnewdkim": {
+            "post": {
+                "summary": "Request a new DKIM Key",
+                "description": "Requests a new DKIM key to be created. Until the DNS entries are confirmed,\nthe new values will be in the `DKIMPendingHost` and `DKIMPendingTextValue` fields.\nAfter the new DKIM value is verified in DNS, the pending values will migrate to\n`DKIMTextValue` and `DKIMPendingTextValue` and Postmark will begin to sign emails\nwith the new DKIM key.\n",
+                "operationId": "RequestNewDKIMKeyForSenderSignature",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "signatureid",
+                        "in": "path",
+                        "description": "The ID for the Sender Signature that should be retrieved."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ExtendedServerInfo"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/domains": {
+            "get": {
+                "summary": "List Domains",
+                "description": "",
+                "operationId": "ListDomains",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "Number of servers to return per request."
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "Number of servers to skip."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ExtendedServerInfo"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create a Domain",
+                "description": "",
+                "operationId": "CreateDomain",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ExtendedServerInfo"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/domains\/{domainid}": {
+            "get": {
+                "summary": "Get a Domain",
+                "description": "",
+                "operationId": "GetDomain",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "domainid",
+                        "in": "path",
+                        "description": "The ID for the Domain that should be retrieved."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ExtendedServerInfo"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update a Domain",
+                "description": "",
+                "operationId": "EditDomain",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "domainid",
+                        "in": "path",
+                        "description": "The ID for the Domain that should be retrieved."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ExtendedServerInfo"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete a Domain",
+                "description": "",
+                "operationId": "DeleteDomain",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "domainid",
+                        "in": "path",
+                        "description": "The ID for the Domain that should be retrieved."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ExtendedServerInfo"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/domains\/{domainid}\/verifydkim": {
+            "put": {
+                "summary": "Request DNS Verification for DKIM",
+                "description": "",
+                "operationId": "RequestDkimVerificationForDomain",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "domainid",
+                        "in": "path",
+                        "description": "The ID for the Domain that should be retrieved."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ExtendedServerInfo"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/domains\/{domainid}\/verifyreturnpath": {
+            "put": {
+                "summary": "Request DNS Verification for Return-Path",
+                "description": "",
+                "operationId": "RequestReturnPathVerificationForDomain",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "domainid",
+                        "in": "path",
+                        "description": "The ID for the Domain that should be retrieved."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ExtendedServerInfo"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/domains\/{domainid}\/verifyspf": {
+            "post": {
+                "summary": "Request DNS Verification for SPF",
+                "description": "",
+                "operationId": "RequestSPFVerificationForDomain",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "domainid",
+                        "in": "path",
+                        "description": "The ID for the Domain that should be retrieved."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ExtendedServerInfo"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/domains\/{domainid}\/rotatedkim": {
+            "post": {
+                "summary": "Rotate DKIM Key",
+                "description": "Creates a new DKIM key to replace your current key. Until the DNS entries are confirmed,\nthe new values will be in the `DKIMPendingHost` and `DKIMPendingTextValue` fields.\nAfter the new DKIM value is verified in DNS, the pending values will migrate to\n`DKIMTextValue` and `DKIMPendingTextValue` and Postmark will begin to sign emails\nwith the new DKIM key.\n",
+                "operationId": "RotateDKIMKeyForDomain",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "domainid",
+                        "in": "path",
+                        "description": "The ID for the Domain that should be retrieved."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ExtendedServerInfo"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/templates\/push": {
+            "put": {
+                "summary": "Push templates from one server to another",
+                "description": "",
+                "operationId": "PushTemplates",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/ExtendedServerInfo"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "StandardPostmarkResponse": {
+                "type": "object",
+                "properties": {
+                    "ErrorCode": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "ExtendedServerInfo": {
+                "type": "object",
+                "properties": {
+                    "ID": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "Name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ApiTokens": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "ServerLink": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Color": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "SmtpApiActivated": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "RawEmailEnabled": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "DeliveryHookUrl": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "InboundAddress": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "InboundHookUrl": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "BounceHookUrl": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "OpenHookUrl": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "PostFirstOpenOnly": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "TrackOpens": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "TrackLinks": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ClickHookUrl": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "InboundDomain": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "InboundHash": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "InboundSpamThreshold": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "ApiTokens": {
+                "type": "array"
+            },
+            "CreateServerPayload": {
+                "type": "object",
+                "properties": {
+                    "Name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Color": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "RawEmailEnabled": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "DeliveryHookUrl": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "SmtpApiActivated": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "InboundHookUrl": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "BounceHookUrl": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "OpenHookUrl": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "PostFirstOpenOnly": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "TrackOpens": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "TrackLinks": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ClickHookUrl": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "InboundDomain": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "InboundSpamThreshold": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "EditServerPayload": {
+                "type": "object",
+                "properties": {
+                    "Name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Color": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "RawEmailEnabled": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "DeliveryHookUrl": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "SmtpApiActivated": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "InboundHookUrl": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "BounceHookUrl": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "OpenHookUrl": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "PostFirstOpenOnly": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "TrackOpens": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "TrackLinks": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ClickHookUrl": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "InboundDomain": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "InboundSpamThreshold": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "ServerListingResponse": {
+                "type": "object",
+                "properties": {
+                    "TotalCount": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "Servers": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "Servers": {
+                "type": "array"
+            },
+            "SenderSignatureInformation": {
+                "type": "object",
+                "properties": {
+                    "Domain": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "EmailAddress": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ReplyToEmailAddress": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Confirmed": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "ID": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "SenderSignatureExtendedInformation": {
+                "type": "object",
+                "properties": {
+                    "Domain": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "EmailAddress": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ReplyToEmailAddress": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Confirmed": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "SPFVerified": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "SPFHost": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "SPFTextValue": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "DKIMVerified": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "WeakDKIM": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "DKIMHost": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "DKIMTestValue": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "DKIMPendingHost": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "DKIMPendingTextValue": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "DKIMRevokedHost": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "DKIMRevokedTextValue": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "SafeToRemoveRevokedKeyFromDNS": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "DKIMUpdateStatus": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ReturnPathDomain": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ReturnPathDomainVerified": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "ReturnPathDomainCNAMEValue": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ID": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "SenderListingResults": {
+                "type": "object",
+                "properties": {
+                    "TotalCount": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "SenderSignatures": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "SenderSignatures": {
+                "type": "array"
+            },
+            "SenderSignatureCreationModel": {
+                "type": "object",
+                "properties": {
+                    "FromEmail": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ReplyToEmail": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ReturnPathDomain": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "SenderSignatureEditingModel": {
+                "type": "object",
+                "properties": {
+                    "Name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ReplyToEmail": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ReturnPathDomain": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "DomainInformation": {
+                "type": "object",
+                "properties": {
+                    "Name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "SPFVerified": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "DKIMVerified": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "WeakDKIM": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "ReturnPathDomainVerified": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "ID": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "DomainExtendedInformation": {
+                "type": "object",
+                "properties": {
+                    "Name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "SPFVerified": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "SPFHost": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "SPFTextValue": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "DKIMVerified": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "WeakDKIM": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "DKIMHost": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "DKIMTestValue": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "DKIMPendingHost": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "DKIMPendingTextValue": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "DKIMRevokedHost": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "DKIMRevokedTextValue": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "SafeToRemoveRevokedKeyFromDNS": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "DKIMUpdateStatus": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ReturnPathDomain": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ReturnPathDomainVerified": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "ReturnPathDomainCNAMEValue": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ID": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "DomainListingResults": {
+                "type": "object",
+                "properties": {
+                    "TotalCount": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "Domains": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "Domains": {
+                "type": "array"
+            },
+            "DomainSPFResult": {
+                "type": "object",
+                "properties": {
+                    "SPFHost": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "SPFVerified": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "SPFTextValue": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "DKIMRotationResponse": {
+                "type": "object",
+                "properties": {
+                    "Name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "DKIMVerified": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "WeakDKIM": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "DKIMHost": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "DKIMTestValue": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "DKIMPendingHost": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "DKIMPendingTextValue": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "DKIMRevokedHost": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "DKIMRevokedTextValue": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "SafeToRemoveRevokedKeyFromDNS": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "DKIMUpdateStatus": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ID": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "DomainCreationModel": {
+                "type": "object",
+                "properties": {
+                    "Name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ReturnPathDomain": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "DomainEditingModel": {
+                "type": "object",
+                "properties": {
+                    "ReturnPathDomain": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "TemplatesPushModel": {
+                "type": "object",
+                "properties": {
+                    "SourceServerId": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "DestinationServerId": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "PerformChanges": {
+                        "description": "",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "TemplatesPushResponse": {
+                "type": "object",
+                "properties": {
+                    "TotalCount": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "Templates": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "Templates": {
+                "type": "array"
+            }
+        }
+    }
+}
