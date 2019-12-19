@@ -1,0 +1,722 @@
+{
+    "id": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+    "name": "Postmark Account-level API",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "6ffc0ef5faf24d3f125a6b5f58e2eedd",
+            "name": "Get a Server",
+            "url": "http:\/\/api.postmarkapp.com\/\/servers\/{serverid}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "serverid",
+                    "description": "The ID of the Server to get.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "rawModeData": ""
+        },
+        {
+            "id": "f1113485cc4ad7147fd955f3d3a67d79",
+            "name": "Edit a Server",
+            "url": "http:\/\/api.postmarkapp.com\/\/servers\/{serverid}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "serverid",
+                    "description": "The ID of the Server to get.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "rawModeData": ""
+        },
+        {
+            "id": "a7b9a39d6dd65e5d1fe37ef42492734a",
+            "name": "Delete a Server",
+            "url": "http:\/\/api.postmarkapp.com\/\/servers\/{serverid}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "serverid",
+                    "description": "The ID of the Server to get.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "rawModeData": ""
+        },
+        {
+            "id": "753eca5d95248e3cd1bf9679f63bdecd",
+            "name": "List servers",
+            "url": "http:\/\/api.postmarkapp.com\/\/servers",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "count",
+                    "description": "Number of servers to return per request.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "Number of servers to skip.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "name",
+                    "description": "Filter by a specific server name",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "rawModeData": ""
+        },
+        {
+            "id": "b1e8f692d65e275ba23c7f4bae353d1e",
+            "name": "Create a Server",
+            "url": "http:\/\/api.postmarkapp.com\/\/servers",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "rawModeData": ""
+        },
+        {
+            "id": "ad7a1b7f345103700f86eda48680b236",
+            "name": "List Sender Signatures",
+            "url": "http:\/\/api.postmarkapp.com\/\/senders",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "count",
+                    "description": "Number of servers to return per request.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "Number of servers to skip.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "rawModeData": ""
+        },
+        {
+            "id": "5bb47ffee508e78cb195e7576e31c928",
+            "name": "Create a Sender Signature",
+            "url": "http:\/\/api.postmarkapp.com\/\/senders",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "rawModeData": ""
+        },
+        {
+            "id": "c2d529932239f818ba1fe5f4aa143e42",
+            "name": "Get a Sender Signature",
+            "url": "http:\/\/api.postmarkapp.com\/\/senders\/{signatureid}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "signatureid",
+                    "description": "The ID for the Sender Signature that should be retrieved.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "rawModeData": ""
+        },
+        {
+            "id": "fb3feea5be207bf50074f6f0f71888e2",
+            "name": "Update a Sender Signature",
+            "url": "http:\/\/api.postmarkapp.com\/\/senders\/{signatureid}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "signatureid",
+                    "description": "The ID for the Sender Signature that should be retrieved.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "rawModeData": ""
+        },
+        {
+            "id": "cb368d786dd656ffd3a4e04812f3d3d3",
+            "name": "Delete a Sender Signature",
+            "url": "http:\/\/api.postmarkapp.com\/\/senders\/{signatureid}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "signatureid",
+                    "description": "The ID for the Sender Signature that should be retrieved.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "rawModeData": ""
+        },
+        {
+            "id": "8a427d9eeb2a0c18f95ee47970e7bbd7",
+            "name": "Resend Signature Confirmation Email",
+            "url": "http:\/\/api.postmarkapp.com\/\/senders\/{signatureid}\/resend",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "signatureid",
+                    "description": "The ID for the Sender Signature that should be retrieved.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "rawModeData": ""
+        },
+        {
+            "id": "b7d6a66dd0532688a1c1e88d4c061932",
+            "name": "Request DNS Verification for SPF",
+            "url": "http:\/\/api.postmarkapp.com\/\/senders\/{signatureid}\/verifyspf",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "signatureid",
+                    "description": "The ID for the Sender Signature that should be retrieved.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "rawModeData": ""
+        },
+        {
+            "id": "2bfbd5a9729cdef40b97df53c8db2cb0",
+            "name": "Request a new DKIM Key",
+            "url": "http:\/\/api.postmarkapp.com\/\/senders\/{signatureid}\/requestnewdkim",
+            "description": "Requests a new DKIM key to be created. Until the DNS entries are confirmed,\nthe new values will be in the `DKIMPendingHost` and `DKIMPendingTextValue` fields.\nAfter the new DKIM value is verified in DNS, the pending values will migrate to\n`DKIMTextValue` and `DKIMPendingTextValue` and Postmark will begin to sign emails\nwith the new DKIM key.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "signatureid",
+                    "description": "The ID for the Sender Signature that should be retrieved.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "rawModeData": ""
+        },
+        {
+            "id": "60f85f8d5af8f43a5cda0df716a486f5",
+            "name": "List Domains",
+            "url": "http:\/\/api.postmarkapp.com\/\/domains",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "count",
+                    "description": "Number of servers to return per request.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "Number of servers to skip.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "rawModeData": ""
+        },
+        {
+            "id": "47cdd7005d8d7cd5205de40633a283c2",
+            "name": "Create a Domain",
+            "url": "http:\/\/api.postmarkapp.com\/\/domains",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "rawModeData": ""
+        },
+        {
+            "id": "f46de645552badf57cb1bfeeb7b910a9",
+            "name": "Get a Domain",
+            "url": "http:\/\/api.postmarkapp.com\/\/domains\/{domainid}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "domainid",
+                    "description": "The ID for the Domain that should be retrieved.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "rawModeData": ""
+        },
+        {
+            "id": "adbf287b624501d547697f6c862f3802",
+            "name": "Update a Domain",
+            "url": "http:\/\/api.postmarkapp.com\/\/domains\/{domainid}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "domainid",
+                    "description": "The ID for the Domain that should be retrieved.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "rawModeData": ""
+        },
+        {
+            "id": "249b457e0e26ad2a26cd92a10eaef5bb",
+            "name": "Delete a Domain",
+            "url": "http:\/\/api.postmarkapp.com\/\/domains\/{domainid}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "domainid",
+                    "description": "The ID for the Domain that should be retrieved.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "rawModeData": ""
+        },
+        {
+            "id": "3178d4d84731428472aaccbd58d73fe6",
+            "name": "Request DNS Verification for DKIM",
+            "url": "http:\/\/api.postmarkapp.com\/\/domains\/{domainid}\/verifydkim",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "domainid",
+                    "description": "The ID for the Domain that should be retrieved.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "rawModeData": ""
+        },
+        {
+            "id": "6f74084ea8e4939ae017ab6bcf0c6387",
+            "name": "Request DNS Verification for Return-Path",
+            "url": "http:\/\/api.postmarkapp.com\/\/domains\/{domainid}\/verifyreturnpath",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "domainid",
+                    "description": "The ID for the Domain that should be retrieved.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "rawModeData": ""
+        },
+        {
+            "id": "af3c9553cae6f3896bee226c63c7530c",
+            "name": "Request DNS Verification for SPF",
+            "url": "http:\/\/api.postmarkapp.com\/\/domains\/{domainid}\/verifyspf",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "domainid",
+                    "description": "The ID for the Domain that should be retrieved.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "rawModeData": ""
+        },
+        {
+            "id": "4fb24c67539770aa0686c7de0c19fb20",
+            "name": "Rotate DKIM Key",
+            "url": "http:\/\/api.postmarkapp.com\/\/domains\/{domainid}\/rotatedkim",
+            "description": "Creates a new DKIM key to replace your current key. Until the DNS entries are confirmed,\nthe new values will be in the `DKIMPendingHost` and `DKIMPendingTextValue` fields.\nAfter the new DKIM value is verified in DNS, the pending values will migrate to\n`DKIMTextValue` and `DKIMPendingTextValue` and Postmark will begin to sign emails\nwith the new DKIM key.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "domainid",
+                    "description": "The ID for the Domain that should be retrieved.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "rawModeData": ""
+        },
+        {
+            "id": "14a33c8d4513826fe607cc8cb23b5080",
+            "name": "Push templates from one server to another",
+            "url": "http:\/\/api.postmarkapp.com\/\/templates\/push",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "rawModeData": ""
+        }
+    ]
+}
