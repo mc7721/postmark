@@ -1,5 +1,5 @@
 {
-    "id": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+    "id": "75805651e949364428b01bfa7d801f49",
     "name": "Postmark Account-level API",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "6ffc0ef5faf24d3f125a6b5f58e2eedd",
+            "id": "147dff80a47edb3455e64faff95f4f94",
             "name": "Get a Server",
             "url": "http:\/\/api.postmarkapp.com\/\/servers\/{serverid}",
             "description": "",
@@ -37,11 +37,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "collectionId": "75805651e949364428b01bfa7d801f49",
             "rawModeData": ""
         },
         {
-            "id": "f1113485cc4ad7147fd955f3d3a67d79",
+            "id": "1d425540e7bba1ae0539fe2895ab54a2",
             "name": "Edit a Server",
             "url": "http:\/\/api.postmarkapp.com\/\/servers\/{serverid}",
             "description": "",
@@ -68,11 +68,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "collectionId": "75805651e949364428b01bfa7d801f49",
             "rawModeData": ""
         },
         {
-            "id": "a7b9a39d6dd65e5d1fe37ef42492734a",
+            "id": "17b101b5d7c2641fae52fc2b9f840abb",
             "name": "Delete a Server",
             "url": "http:\/\/api.postmarkapp.com\/\/servers\/{serverid}",
             "description": "",
@@ -99,11 +99,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "collectionId": "75805651e949364428b01bfa7d801f49",
             "rawModeData": ""
         },
         {
-            "id": "753eca5d95248e3cd1bf9679f63bdecd",
+            "id": "2beb118d031e775f01ffe5e34c87aef8",
             "name": "List servers",
             "url": "http:\/\/api.postmarkapp.com\/\/servers",
             "description": "",
@@ -144,11 +144,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "collectionId": "75805651e949364428b01bfa7d801f49",
             "rawModeData": ""
         },
         {
-            "id": "b1e8f692d65e275ba23c7f4bae353d1e",
+            "id": "43ae18d01dbd2e68d7dd2314f1475ef4",
             "name": "Create a Server",
             "url": "http:\/\/api.postmarkapp.com\/\/servers",
             "description": "",
@@ -167,11 +167,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "collectionId": "75805651e949364428b01bfa7d801f49",
             "rawModeData": ""
         },
         {
-            "id": "ad7a1b7f345103700f86eda48680b236",
+            "id": "7797bfc065c5fa16c0f02684f7b40474",
             "name": "List Sender Signatures",
             "url": "http:\/\/api.postmarkapp.com\/\/senders",
             "description": "",
@@ -205,11 +205,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "collectionId": "75805651e949364428b01bfa7d801f49",
             "rawModeData": ""
         },
         {
-            "id": "5bb47ffee508e78cb195e7576e31c928",
+            "id": "a8b33dcaade3ba6ddf8edaecd7f7a194",
             "name": "Create a Sender Signature",
             "url": "http:\/\/api.postmarkapp.com\/\/senders",
             "description": "",
@@ -228,11 +228,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "collectionId": "75805651e949364428b01bfa7d801f49",
             "rawModeData": ""
         },
         {
-            "id": "c2d529932239f818ba1fe5f4aa143e42",
+            "id": "9cba809451b436d294bdedf8bb42bf37",
             "name": "Get a Sender Signature",
             "url": "http:\/\/api.postmarkapp.com\/\/senders\/{signatureid}",
             "description": "",
@@ -259,11 +259,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "collectionId": "75805651e949364428b01bfa7d801f49",
             "rawModeData": ""
         },
         {
-            "id": "fb3feea5be207bf50074f6f0f71888e2",
+            "id": "a1abbc3983cba335cd39169c247201dd",
             "name": "Update a Sender Signature",
             "url": "http:\/\/api.postmarkapp.com\/\/senders\/{signatureid}",
             "description": "",
@@ -290,11 +290,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "collectionId": "75805651e949364428b01bfa7d801f49",
             "rawModeData": ""
         },
         {
-            "id": "cb368d786dd656ffd3a4e04812f3d3d3",
+            "id": "fb65308d20f35eb425f3c60269c86bc7",
             "name": "Delete a Sender Signature",
             "url": "http:\/\/api.postmarkapp.com\/\/senders\/{signatureid}",
             "description": "",
@@ -321,11 +321,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "collectionId": "75805651e949364428b01bfa7d801f49",
             "rawModeData": ""
         },
         {
-            "id": "8a427d9eeb2a0c18f95ee47970e7bbd7",
+            "id": "a8c3d1c2ec15440df198e545f9079b01",
             "name": "Resend Signature Confirmation Email",
             "url": "http:\/\/api.postmarkapp.com\/\/senders\/{signatureid}\/resend",
             "description": "",
@@ -352,11 +352,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "collectionId": "75805651e949364428b01bfa7d801f49",
             "rawModeData": ""
         },
         {
-            "id": "b7d6a66dd0532688a1c1e88d4c061932",
+            "id": "435af50e8ee448dc211537276d377d8f",
             "name": "Request DNS Verification for SPF",
             "url": "http:\/\/api.postmarkapp.com\/\/senders\/{signatureid}\/verifyspf",
             "description": "",
@@ -383,11 +383,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "collectionId": "75805651e949364428b01bfa7d801f49",
             "rawModeData": ""
         },
         {
-            "id": "2bfbd5a9729cdef40b97df53c8db2cb0",
+            "id": "d84188cc14cf1d65a80173c77cd26ef0",
             "name": "Request a new DKIM Key",
             "url": "http:\/\/api.postmarkapp.com\/\/senders\/{signatureid}\/requestnewdkim",
             "description": "Requests a new DKIM key to be created. Until the DNS entries are confirmed,\nthe new values will be in the `DKIMPendingHost` and `DKIMPendingTextValue` fields.\nAfter the new DKIM value is verified in DNS, the pending values will migrate to\n`DKIMTextValue` and `DKIMPendingTextValue` and Postmark will begin to sign emails\nwith the new DKIM key.\n",
@@ -414,11 +414,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "collectionId": "75805651e949364428b01bfa7d801f49",
             "rawModeData": ""
         },
         {
-            "id": "60f85f8d5af8f43a5cda0df716a486f5",
+            "id": "4d8c6d8c35861af665248cf71754ab36",
             "name": "List Domains",
             "url": "http:\/\/api.postmarkapp.com\/\/domains",
             "description": "",
@@ -452,11 +452,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "collectionId": "75805651e949364428b01bfa7d801f49",
             "rawModeData": ""
         },
         {
-            "id": "47cdd7005d8d7cd5205de40633a283c2",
+            "id": "1104595554fd6054974b5b68583ccdf6",
             "name": "Create a Domain",
             "url": "http:\/\/api.postmarkapp.com\/\/domains",
             "description": "",
@@ -475,11 +475,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "collectionId": "75805651e949364428b01bfa7d801f49",
             "rawModeData": ""
         },
         {
-            "id": "f46de645552badf57cb1bfeeb7b910a9",
+            "id": "64cc36d60a6baa8d179c045f4ee8b894",
             "name": "Get a Domain",
             "url": "http:\/\/api.postmarkapp.com\/\/domains\/{domainid}",
             "description": "",
@@ -506,11 +506,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "collectionId": "75805651e949364428b01bfa7d801f49",
             "rawModeData": ""
         },
         {
-            "id": "adbf287b624501d547697f6c862f3802",
+            "id": "bee4d6d879c78b977deb354ea261e6b2",
             "name": "Update a Domain",
             "url": "http:\/\/api.postmarkapp.com\/\/domains\/{domainid}",
             "description": "",
@@ -537,11 +537,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "collectionId": "75805651e949364428b01bfa7d801f49",
             "rawModeData": ""
         },
         {
-            "id": "249b457e0e26ad2a26cd92a10eaef5bb",
+            "id": "4dad6d03a1393b72f29ec50f8b91163c",
             "name": "Delete a Domain",
             "url": "http:\/\/api.postmarkapp.com\/\/domains\/{domainid}",
             "description": "",
@@ -568,11 +568,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "collectionId": "75805651e949364428b01bfa7d801f49",
             "rawModeData": ""
         },
         {
-            "id": "3178d4d84731428472aaccbd58d73fe6",
+            "id": "c8b18cb4a922aeb255b24bdebbc33d55",
             "name": "Request DNS Verification for DKIM",
             "url": "http:\/\/api.postmarkapp.com\/\/domains\/{domainid}\/verifydkim",
             "description": "",
@@ -599,11 +599,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "collectionId": "75805651e949364428b01bfa7d801f49",
             "rawModeData": ""
         },
         {
-            "id": "6f74084ea8e4939ae017ab6bcf0c6387",
+            "id": "16f95822b71ee0a4fa4dc06d46542cdb",
             "name": "Request DNS Verification for Return-Path",
             "url": "http:\/\/api.postmarkapp.com\/\/domains\/{domainid}\/verifyreturnpath",
             "description": "",
@@ -630,11 +630,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "collectionId": "75805651e949364428b01bfa7d801f49",
             "rawModeData": ""
         },
         {
-            "id": "af3c9553cae6f3896bee226c63c7530c",
+            "id": "dcb220814a58bd1d1a5dbba58c76e37e",
             "name": "Request DNS Verification for SPF",
             "url": "http:\/\/api.postmarkapp.com\/\/domains\/{domainid}\/verifyspf",
             "description": "",
@@ -661,11 +661,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "collectionId": "75805651e949364428b01bfa7d801f49",
             "rawModeData": ""
         },
         {
-            "id": "4fb24c67539770aa0686c7de0c19fb20",
+            "id": "acff273561e83978ac049e215dff90e9",
             "name": "Rotate DKIM Key",
             "url": "http:\/\/api.postmarkapp.com\/\/domains\/{domainid}\/rotatedkim",
             "description": "Creates a new DKIM key to replace your current key. Until the DNS entries are confirmed,\nthe new values will be in the `DKIMPendingHost` and `DKIMPendingTextValue` fields.\nAfter the new DKIM value is verified in DNS, the pending values will migrate to\n`DKIMTextValue` and `DKIMPendingTextValue` and Postmark will begin to sign emails\nwith the new DKIM key.\n",
@@ -692,11 +692,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "collectionId": "75805651e949364428b01bfa7d801f49",
             "rawModeData": ""
         },
         {
-            "id": "14a33c8d4513826fe607cc8cb23b5080",
+            "id": "107536673a0d8b9b26b8d91e2f5d1f4e",
             "name": "Push templates from one server to another",
             "url": "http:\/\/api.postmarkapp.com\/\/templates\/push",
             "description": "",
@@ -715,7 +715,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "c58e0b17b4cbd48e1b79d7bc52eacf1c",
+            "collectionId": "75805651e949364428b01bfa7d801f49",
             "rawModeData": ""
         }
     ]
