@@ -1,5 +1,5 @@
 {
-    "id": "5f0057e347cba03ff159d5584980ce55",
+    "id": "f65dc9aeab94949fab87a2b4e5522184",
     "name": "Postmark API",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "08d53dfcea7067e8f61c27327b1cfbf4",
+            "id": "aeeafd2e0ac61816ec9c69c57aad5254",
             "name": "Send a single email",
             "url": "http:\/\/api.postmarkapp.com\/\/email",
             "description": "",
@@ -29,11 +29,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "fe088a10175dfe83651d193c132193e2",
+            "id": "21914e2f38dab9fc0c0bd1ce9c165a42",
             "name": "Send a batch of emails",
             "url": "http:\/\/api.postmarkapp.com\/\/email\/batch",
             "description": "",
@@ -52,11 +52,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "1703250088f200e9cb4eb551c918ef20",
+            "id": "d790bc61ca6756b4a791104d2b70452a",
             "name": "Get delivery stats",
             "url": "http:\/\/api.postmarkapp.com\/\/deliverystats",
             "description": "",
@@ -75,11 +75,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "ffbadd21698385a67b0c005648e67773",
+            "id": "918354ad99620fa94b5832161967835a",
             "name": "Get bounces",
             "url": "http:\/\/api.postmarkapp.com\/\/bounces",
             "description": "",
@@ -162,11 +162,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "7ec84f3bbdb5f0ae3d4d3cf939d34808",
+            "id": "080c3d6c3164ed0ed5f308880692b2d1",
             "name": "Get a single bounce",
             "url": "http:\/\/api.postmarkapp.com\/\/bounces\/{bounceid}",
             "description": "",
@@ -193,11 +193,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "a5b9cf3afe20e7256a12b65f9bd6d898",
+            "id": "b6e3f5fa3259a087bcd6060a20530a5d",
             "name": "Get bounce dump",
             "url": "http:\/\/api.postmarkapp.com\/\/bounces\/{bounceid}\/dump",
             "description": "",
@@ -224,11 +224,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "edd970bb8e276498092f2d94765c10c2",
+            "id": "afc69c2684d7c5db4482189c94c624ad",
             "name": "Get bounced tags",
             "url": "http:\/\/api.postmarkapp.com\/\/bounces\/tags",
             "description": "",
@@ -247,11 +247,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "de14cc4ecc052f5ffd9ad18a198c296c",
+            "id": "1491d8a5b46ef36afcdfe37810f8f25e",
             "name": "Activate a bounce",
             "url": "http:\/\/api.postmarkapp.com\/\/bounces\/{bounceid}\/activate",
             "description": "",
@@ -278,11 +278,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "569d8a645d763914a0f5accf800732c7",
+            "id": "b45fd763d0fe2019231eff83a78ec4a7",
             "name": "Outbound message search",
             "url": "http:\/\/api.postmarkapp.com\/\/messages\/outbound",
             "description": "",
@@ -358,11 +358,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "0a52f78a3642fc534295b493dec7cd69",
+            "id": "61858dbd205438ba2f835efc0ddd6347",
             "name": "Outbound message details",
             "url": "http:\/\/api.postmarkapp.com\/\/messages\/outbound\/{messageid}\/details",
             "description": "",
@@ -389,11 +389,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "3c02dbe4bba719bbf19470187d7930cb",
+            "id": "23906e3a6866779979980e1e7d0f1e28",
             "name": "Outbound message dump",
             "url": "http:\/\/api.postmarkapp.com\/\/messages\/outbound\/{messageid}\/dump",
             "description": "",
@@ -420,11 +420,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "d130e5d7f7b5e9c6726da292f4d1e2dd",
+            "id": "8a63b0422428a91ba0d5d3e6b8210184",
             "name": "Inbound message search",
             "url": "http:\/\/api.postmarkapp.com\/\/messages\/inbound",
             "description": "",
@@ -514,11 +514,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "aceabe3acfd740dac5d8e9ac6b02f795",
+            "id": "3099e56592643f086bf8af4208162a5f",
             "name": "Inbound message details",
             "url": "http:\/\/api.postmarkapp.com\/\/messages\/inbound\/{messageid}\/details",
             "description": "",
@@ -545,11 +545,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "ee3b31f4cd51507325fdf5dfab009518",
+            "id": "d7e2817b4cf30eca6177116de64bd5b4",
             "name": "Bypass rules for a blocked inbound message",
             "url": "http:\/\/api.postmarkapp.com\/\/messages\/inbound\/{messageid}\/bypass",
             "description": "",
@@ -576,11 +576,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "387c4919d2ddba5e73c1a9747c87cda4",
+            "id": "6376aa0a295af3f5be5c2584d5ddae75",
             "name": "Retry a failed inbound message for processing",
             "url": "http:\/\/api.postmarkapp.com\/\/messages\/inbound\/{messageid}\/retry",
             "description": "",
@@ -607,11 +607,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "dd13a373d14923ab8e8b40e72037fe88",
+            "id": "af61d21e8f4390e0b0d9647e3f3a0bba",
             "name": "Opens for all messages",
             "url": "http:\/\/api.postmarkapp.com\/\/messages\/outbound\/opens",
             "description": "",
@@ -729,11 +729,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "952739d911537a883c3077abc97ad5c3",
+            "id": "dc5c6b71a099ce39d64dc4d1617590ef",
             "name": "Retrieve Message Opens",
             "url": "http:\/\/api.postmarkapp.com\/\/messages\/outbound\/opens\/{messageid}",
             "description": "",
@@ -774,11 +774,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "ea66af6516fb6edda5ad466ac45128cb",
+            "id": "adaf44b6aac8b768f2224fed184478b4",
             "name": "Clicks for a all messages",
             "url": "http:\/\/api.postmarkapp.com\/\/messages\/outbound\/clicks",
             "description": "",
@@ -896,11 +896,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "a6adf437e6e85fe645ca88f33ec4799b",
+            "id": "035a2f02cc5232a7bfc5efba76e4c2d4",
             "name": "Retrieve Message Clicks",
             "url": "http:\/\/api.postmarkapp.com\/\/messages\/outbound\/clicks\/{messageid}",
             "description": "",
@@ -941,11 +941,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "75e9431f08db2f6dabbfdd6c27d866f2",
+            "id": "f280acec9eacb2f9c2e80615cbcacc5f",
             "name": "Send an email using a Template",
             "url": "http:\/\/api.postmarkapp.com\/\/email\/withTemplate",
             "description": "",
@@ -964,11 +964,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "78855878cf8a9192679bd951c0f39b93",
+            "id": "f1349a3d9cca2651000bf0234531d61e",
             "name": "Send a batch of email using templates.",
             "url": "http:\/\/api.postmarkapp.com\/\/email\/batchWithTemplates",
             "description": "",
@@ -987,11 +987,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "5380b98f6f5ac1398852d0c269fdcd88",
+            "id": "cf6c853ab705f31695a0c4c4d2d3f363",
             "name": "Get the Templates associated with this Server",
             "url": "http:\/\/api.postmarkapp.com\/\/templates",
             "description": "",
@@ -1025,11 +1025,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "5ff96d608e2fdb341cc7bd38f8a9d297",
+            "id": "0bdf4f242b352d56ab1f24bd2565201e",
             "name": "Create a Template",
             "url": "http:\/\/api.postmarkapp.com\/\/templates",
             "description": "",
@@ -1048,11 +1048,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "61f1723c0b66a36b294688da32cb7a58",
+            "id": "a8114abba9f3909f1ff9ce3bd5287b63",
             "name": "Get a Template",
             "url": "http:\/\/api.postmarkapp.com\/\/templates\/{templateIdOrAlias}",
             "description": "",
@@ -1079,11 +1079,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "bcf8f2dda2cd294358bdc96733aefe96",
+            "id": "287e0e04a4dada7a00688d859202f69f",
             "name": "Update a Template",
             "url": "http:\/\/api.postmarkapp.com\/\/templates\/{templateIdOrAlias}",
             "description": "",
@@ -1110,11 +1110,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "f692cc2043bb99e7f7ad5c2d6f6afd42",
+            "id": "0dac0955041fd5c2143bf0b68855fa93",
             "name": "Delete a Template",
             "url": "http:\/\/api.postmarkapp.com\/\/templates\/{templateIdOrAlias}",
             "description": "",
@@ -1141,11 +1141,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "e5e47d26fd80ce9a6fc560f2c0908da1",
+            "id": "f15ff8f3d48fa08ad322840cb59af156",
             "name": "Test Template Content",
             "url": "http:\/\/api.postmarkapp.com\/\/templates\/validate",
             "description": "",
@@ -1164,11 +1164,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "3bf8854d60ee16cd75d1744f4db90bb5",
+            "id": "5b11f822e043be8a7ab5d8f4c6065313",
             "name": "Get outbound overview",
             "url": "http:\/\/api.postmarkapp.com\/\/stats\/outbound",
             "description": "",
@@ -1209,11 +1209,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "0855adf74c96e019a6ee78f4aaa924bb",
+            "id": "0db7b2ca6feca903d75ae63d1db1561f",
             "name": "Get sent counts",
             "url": "http:\/\/api.postmarkapp.com\/\/stats\/outbound\/sends",
             "description": "",
@@ -1254,11 +1254,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "92c8832f5fd86d2aaeca08c37342e78d",
+            "id": "0109abb9ef099ca5f7b10dc569eea95b",
             "name": "Get bounce counts",
             "url": "http:\/\/api.postmarkapp.com\/\/stats\/outbound\/bounces",
             "description": "",
@@ -1299,11 +1299,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "a4e0bfc77732606054c6f33b8a6b6c03",
+            "id": "e88780722921833bbb100aa5400ef598",
             "name": "Get spam complaints",
             "url": "http:\/\/api.postmarkapp.com\/\/stats\/outbound\/spam",
             "description": "",
@@ -1344,11 +1344,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "d5ddad76486f3099b0c1cbd1000b609a",
+            "id": "97289e8580cebcfdfa71e8de14b14afc",
             "name": "Get tracked email counts",
             "url": "http:\/\/api.postmarkapp.com\/\/stats\/outbound\/tracked",
             "description": "",
@@ -1389,11 +1389,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "3640a9ac64ae4e89cf70914e777414e3",
+            "id": "01524d7fd189b5346872bd8d8997c22e",
             "name": "Get email open counts",
             "url": "http:\/\/api.postmarkapp.com\/\/stats\/outbound\/opens",
             "description": "",
@@ -1434,11 +1434,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "a7e7c9c387524546276af83be3887d81",
+            "id": "e56442d4c200128f452b3050a5bd66ec",
             "name": "Get email platform usage",
             "url": "http:\/\/api.postmarkapp.com\/\/stats\/outbound\/opens\/platforms",
             "description": "",
@@ -1479,11 +1479,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "5d5b53c3ec291091a8eaee5f6c2bdd33",
+            "id": "18e70edf6dc5a962d1d4197d2a215b31",
             "name": "Get email client usage",
             "url": "http:\/\/api.postmarkapp.com\/\/stats\/outbound\/opens\/emailclients",
             "description": "",
@@ -1524,11 +1524,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "6d05370980ec26266039070d6286bb4b",
+            "id": "0888af56e60ebed3a4abc6e4f077ffe9",
             "name": "Get click counts",
             "url": "http:\/\/api.postmarkapp.com\/\/stats\/outbound\/clicks",
             "description": "",
@@ -1569,11 +1569,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "4a6f6e6f9ced5d937aa2d8520031b3c5",
+            "id": "4e0e3f32c71da6d94afdc35faf82ee4d",
             "name": "Get browser usage by family",
             "url": "http:\/\/api.postmarkapp.com\/\/stats\/outbound\/clicks\/browserfamilies",
             "description": "",
@@ -1614,11 +1614,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "2f806de3ba41bb8cbff875525743a504",
+            "id": "becb1edc3272c35f7c7c2ef3f3f2a270",
             "name": "Get browser plaform usage",
             "url": "http:\/\/api.postmarkapp.com\/\/stats\/outbound\/clicks\/platforms",
             "description": "",
@@ -1659,11 +1659,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "128fdbff01d5560a7e4f74a88089ec77",
+            "id": "37126c0e517cd36996893ec299c418b6",
             "name": "Get clicks by body location",
             "url": "http:\/\/api.postmarkapp.com\/\/stats\/outbound\/clicks\/location",
             "description": "",
@@ -1704,11 +1704,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "167ef056419874b535d2e478cead149d",
+            "id": "66f1bfa1b2cd5786f43c064d5160369c",
             "name": "Create an inbound rule trigger",
             "url": "http:\/\/api.postmarkapp.com\/\/triggers\/inboundrules",
             "description": "",
@@ -1727,11 +1727,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "55532eb58f797ed7b176c98aca01da9c",
+            "id": "e50b708e192f542bea71713f21532746",
             "name": "List inbound rule triggers",
             "url": "http:\/\/api.postmarkapp.com\/\/triggers\/inboundrules",
             "description": "",
@@ -1765,11 +1765,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "7b646e7d58a8b5449ad18fb48cafcd47",
+            "id": "25052fa527254aaff268a535aadf0629",
             "name": "Delete a single trigger",
             "url": "http:\/\/api.postmarkapp.com\/\/triggers\/inboundrules\/{triggerid}",
             "description": "",
@@ -1796,11 +1796,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "1eae313e1348014657545db18a3c3dfc",
+            "id": "13368c4099d30d72920eaf4436cef68d",
             "name": "Get Server Configuration",
             "url": "http:\/\/api.postmarkapp.com\/\/server",
             "description": "",
@@ -1819,11 +1819,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         },
         {
-            "id": "9d1fa3f5d7ff2b58c8f1490fb2bfdf36",
+            "id": "851a7813602aa4bad7938683dbc925f2",
             "name": "Edit Server Configuration",
             "url": "http:\/\/api.postmarkapp.com\/\/server",
             "description": "",
@@ -1842,7 +1842,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5f0057e347cba03ff159d5584980ce55",
+            "collectionId": "f65dc9aeab94949fab87a2b4e5522184",
             "rawModeData": ""
         }
     ]
